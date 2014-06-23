@@ -13,10 +13,8 @@ var sendData = function(res) {
 				count = 0;
 			}
 			res.send({
-
 				todoItems: todoItems,
 				count: count
-
 			});
 		});
 	});
