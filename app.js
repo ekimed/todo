@@ -19,7 +19,7 @@ db.once('open', function(){
 	console.log('db successfully connected!');
 });
 
-// routes
+// Routes
 app.get('/', routesController.index);
 app.get('/todo', routesController.getAllItems);
 app.post('/todo/post', routesController.addItem);

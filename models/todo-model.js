@@ -21,8 +21,8 @@ var createItem = function(model, text, cb){
 
 };
 
+// Remove item with matching id
 var deleteItem = function(model, id){
-	// Remove documents with matching id
 	model.remove({
 		_id: id
 	}, function(err){
