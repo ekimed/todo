@@ -35,6 +35,11 @@
 	margin: 10px auto;
 }
 
+#count {
+	display: inline;
+	margin-left: 10px;
+}
+
 #todo-list {
 	margin-top: 50px;
 }
