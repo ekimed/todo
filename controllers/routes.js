@@ -25,13 +25,10 @@ var sendData = function(res) {
 // route controllers
 routesController = {
 	index: function(req, res) {
-
-		res.render('index');
-		
+		res.render('index');		
 	},
 
 	getAllItems: function(req, res) {
-
 		sendData(res);
 	},
 
@@ -47,14 +44,10 @@ routesController = {
 			if (err) console.log('Error when creating new todo item in database', err);
 
 			else{
-
 				console.log('item was successfully added to database: ', item);
-
 				sendData(res);
 			}
-		});
-
-		
+		});		
 	},
 
 	deleteItem: function(req, res) {
@@ -64,9 +57,7 @@ routesController = {
 
 		// Get all items excluding deleted item
 		ToDo.find({}, function(err, todoItems) {
-
 			if (err) console.log('Error retrieving all to-do items', err);
-
 			sendData(res);
 
 		});
