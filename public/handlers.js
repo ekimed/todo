@@ -9,8 +9,6 @@ var handlers = (function() {
 
 			XMLHttpRequestModule.postTodo(todoItemText);
 
-			// todo_app.routes.postTodo(todoItemText);
-
 			// Reset form after post request
 			var form = document.getElementById('todo-form');
 			form.reset()
@@ -29,7 +27,7 @@ var handlers = (function() {
 
 			setTimeout(function() {
 				XMLHttpRequestModule.deleteTodo(link);
-				// todo_app.routes.deleteTodo(link);
+
 			}, 150);
 
 			return false;
