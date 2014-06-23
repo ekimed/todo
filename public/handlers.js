@@ -4,7 +4,9 @@ var handlers = {
 
 		var todoItemText = document.getElementById('todoItemText').value;
 
-		todo_app.routes.postTodo(todoItemText);
+		XMLHttpRequestModule.postTodo(todoItemText);
+
+		// todo_app.routes.postTodo(todoItemText);
 
 		// Reset form after post request
 		var form = document.getElementById('todo-form');
@@ -22,7 +24,8 @@ var handlers = {
 		var link = '/todo/' + e.target.id;
 
 		setTimeout(function() {
-			todo_app.routes.deleteTodo(link);
+			XMLHttpRequestModule.deleteTodo(link);
+			// todo_app.routes.deleteTodo(link);
 		}, 150);
 
 		return false;

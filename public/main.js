@@ -62,7 +62,8 @@ function renderItems(items, count){
 
 document.addEventListener("DOMContentLoaded", function(){
 	// Load current todo items from db
-	todo_app.routes.loadTodoItems();
+	// todo_app.routes.loadTodoItems();
+	XMLHttpRequestModule.loadTodo();
 
 	var todoForm = document.getElementById('todo-form');
 	todoForm.addEventListener('submit', todo_app.handlers.addItemHandler);
