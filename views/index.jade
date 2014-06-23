@@ -1,0 +1,15 @@
+extends layout
+
+block content
+	h1.title Get-Er-Done!
+	div.container
+		div.center Add To-Do item:
+		form#todo-form.form-inline.center(role="form" method="POST" action="/todo")
+			div.form-group
+				input#todoItemText.form-control(type="text")
+			button#submit-btn.btn.btn-default(type="submit") Add
+
+		ul.center#todo-list
+
+		div.count-container.center Number of items left to-do: 
+			span#count

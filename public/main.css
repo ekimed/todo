@@ -1,0 +1,65 @@
+.title {
+	text-align: center;
+	height: 100px;
+	line-height: 95px;
+	background-color: #e67e22;
+	color: white;
+	font-size: 50px;
+	font-weight: 100;
+}
+.center {
+	margin: 0 auto;
+	width: 400px; /* 400px % */
+}
+
+#submit-btn {
+	display: inline-block;
+	float: right;
+}
+
+.form-group {
+	display: inline;
+}
+
+#todoItemText {
+	min-width: 283px;
+}
+.remove-btn {
+	float: right;
+	height: 20px;
+	line-height: 0.428571;
+
+}
+
+.count-container {
+	margin: 10px auto;
+}
+
+#todo-list {
+	margin-top: 50px;
+}
+
+.list-border-style {
+	padding: 25px;
+	border: 1px solid rgb(216, 168,116);
+}
+
+li {
+	height: 30px;
+}
+
+@media screen and (max-width: 768px) {
+	#submit-btn {
+		display:block;
+		float: none;
+	}
+	.form-group {
+		display: block;
+	}
+}
+
+.strikethrough-done {
+	text-decoration: line-through;
+}
+
+
