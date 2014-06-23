@@ -40,7 +40,8 @@ function renderItems(items, count){
 	
 	for (var i = 0; i < removeButton.length; i ++) {
 
-		removeButton[i].addEventListener('click', todo_app.handlers.removeItemHandler);
+		removeButton[i].addEventListener('click', handlers.removeItem);
+
 	}
 
 	// Update count
@@ -66,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function(){
 	XMLHttpRequestModule.loadTodo();
 
 	var todoForm = document.getElementById('todo-form');
-	todoForm.addEventListener('submit', todo_app.handlers.addItemHandler);
+	todoForm.addEventListener('submit', handlers.addItem);
 
 }, true)
 

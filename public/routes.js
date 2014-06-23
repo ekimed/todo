@@ -22,7 +22,7 @@ var XMLHttpRequestModule = (function(){
 	};
 
 	// Return an object exposed to the public
-	return {
+	var module =  {
 
 		// Load all todo items from db
 		loadTodo: function() {
@@ -47,4 +47,6 @@ var XMLHttpRequestModule = (function(){
 			xhr.send(null);
 		}
 	}
+
+	return module;
 })()

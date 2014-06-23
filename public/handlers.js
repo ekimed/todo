@@ -1,35 +1,39 @@
-var handlers = {
-	addItemHandler: function(e) {
-		e.preventDefault();
+// Event handler module
+var handlers = (function() {
+	return {
+		// Click event results in item being added to db
+		addItem: function(e) {
+			e.preventDefault();
 
-		var todoItemText = document.getElementById('todoItemText').value;
+			var todoItemText = document.getElementById('todoItemText').value;
 
-		XMLHttpRequestModule.postTodo(todoItemText);
+			XMLHttpRequestModule.postTodo(todoItemText);
 
-		// todo_app.routes.postTodo(todoItemText);
+			// todo_app.routes.postTodo(todoItemText);
 
-		// Reset form after post request
-		var form = document.getElementById('todo-form');
-		form.reset()
+			// Reset form after post request
+			var form = document.getElementById('todo-form');
+			form.reset()
 
-		return false;
+			return false;
 
-	},
+		},
 
-	removeItemHandler: function(e) {
-		e.preventDefault();
+		// Clieve event results in item being removed from db
+		removeItem: function(e) {
+			e.preventDefault();
 
-		e.target.previousSibling.className = 'strikethrough-done';
+			e.target.previousSibling.className = 'strikethrough-done';
 
-		var link = '/todo/' + e.target.id;
+			var link = '/todo/' + e.target.id;
 
-		setTimeout(function() {
-			XMLHttpRequestModule.deleteTodo(link);
-			// todo_app.routes.deleteTodo(link);
-		}, 150);
+			setTimeout(function() {
+				XMLHttpRequestModule.deleteTodo(link);
+				// todo_app.routes.deleteTodo(link);
+			}, 150);
 
-		return false;
+			return false;
+		}
+
 	}
-}
-
-todo_app.handlers = handlers;
+})();
